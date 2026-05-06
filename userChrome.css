@@ -256,15 +256,36 @@ popup {
   --panel-color: #FFFFFF !important;
   --panel-border-color: #FFB900 !important;
   --panel-border-radius: 0 !important;
+  --arrowpanel-border-radius: 0 !important;
   --menuitem-border-radius: 0 !important;
   --menu-arrow-opacity: 1 !important;
-  background-color: #000000 !important;
   color: #FFFFFF !important;
   border-color: #FFB900 !important;
 }
 
+panel,
+menupopup,
+popup {
+  background-color: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+panelmultiview,
+.panel-viewcontainer,
+.panel-viewstack,
+.panel-subview-body,
+.panel-header,
+.panel-arrowcontent {
+  background-color: #000000 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
 menupopup,
 popup,
+panel::part(content),
 menupopup::part(content),
 popup::part(content),
 menupopup > menu,
@@ -282,10 +303,14 @@ popup > menu::after {
 }
 
 panel::part(content),
-menupopup::part(content) {
+menupopup::part(content),
+popup::part(content) {
   background-color: #000000 !important;
   color: #FFFFFF !important;
-  border-color: #FFB900 !important;
+  border: 1px solid #FFB900 !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
 }
 
 .subviewbutton,
