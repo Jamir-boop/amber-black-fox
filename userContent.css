@@ -15,11 +15,12 @@
     --amber-muted: #A0A0A0;
     --amber-disabled: #555555;
     --amber-accent: #FFB900;
-    --amber-hover: rgba(255, 185, 0, 0.1);
-    --amber-active: rgba(255, 185, 0, 0.18);
-    --amber-outline: rgba(255, 185, 0, 0.55);
+    --amber-hover: #FFB900;
+    --amber-active: #FFB900;
+    --amber-outline: #FFB900;
     --amber-border: #332500;
     --amber-border-strong: #664A00;
+    --amber-font: "Cascadia Mono", "Cascadia Code", monospace;
 
     --in-content-page-background: #000000 !important;
     --in-content-page-color: #FFFFFF !important;
@@ -28,6 +29,8 @@
     --in-content-box-background: #000 !important;
     --in-content-box-background-odd: #050505 !important;
     --in-content-box-info-background: #000 !important;
+    --in-content-table-background: #000 !important;
+    --background-color-box: #000 !important;
     --in-content-box-border-color: #332500 !important;
     --in-content-border-color: #332500 !important;
     --in-content-link-color: #FFB900 !important;
@@ -36,12 +39,12 @@
     --in-content-link-color-visited: #FFB900 !important;
     --in-content-accent-color: #FFB900 !important;
     --in-content-accent-color-active: #FFB900 !important;
-    --in-content-focus-outline-color: rgba(255, 185, 0, 0.55) !important;
-    --focus-outline-color: rgba(255, 185, 0, 0.55) !important;
+    --in-content-focus-outline-color: #FFB900 !important;
+    --focus-outline-color: #FFB900 !important;
 
     --in-content-button-background: #000000 !important;
-    --in-content-button-background-hover: rgba(255, 185, 0, 0.1) !important;
-    --in-content-button-background-active: rgba(255, 185, 0, 0.18) !important;
+    --in-content-button-background-hover: #FFB900 !important;
+    --in-content-button-background-active: #FFB900 !important;
     --in-content-button-text-color: #FFFFFF !important;
     --in-content-primary-button-background: #FFB900 !important;
     --in-content-primary-button-background-hover: #FFB900 !important;
@@ -54,7 +57,7 @@
     --newtab-text-secondary-color: #A0A0A0 !important;
     --newtab-primary-action-background: #FFB900 !important;
     --newtab-primary-element-text-color: #000000 !important;
-    --newtab-element-hover-color: rgba(255, 185, 0, 0.1) !important;
+    --newtab-element-hover-color: #FFB900 !important;
     --newtab-border-color: #332500 !important;
     --newtab-card-background-color: #000 !important;
     --newtab-wordmark-color: #FFFFFF !important;
@@ -70,6 +73,17 @@
   .main-content-wrapper {
     background-color: #000000 !important;
     color: #FFFFFF !important;
+    font-family: var(--amber-font) !important;
+  }
+
+  button,
+  input,
+  select,
+  textarea,
+  menulist,
+  richlistitem,
+  treechildren {
+    font-family: var(--amber-font) !important;
   }
 
   ::selection {
@@ -121,17 +135,35 @@
     accent-color: #FFB900 !important;
   }
 
-  button:hover,
   select:hover,
   input:hover,
-  textarea:hover,
+  textarea:hover {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+    border-color: #FFB900 !important;
+  }
+
+  button:hover,
   richlistitem:hover,
   tr:hover,
   .list-item:hover,
   .category:hover,
   .sidebar-footer-link:hover {
-    background-color: rgba(255, 185, 0, 0.1) !important;
-    color: #FFFFFF !important;
+    background-color: #FFB900 !important;
+    color: #000000 !important;
+    fill: #000000 !important;
+    stroke: #000000 !important;
+  }
+
+  button:hover *,
+  richlistitem:hover *,
+  tr:hover *,
+  .list-item:hover *,
+  .category:hover *,
+  .sidebar-footer-link:hover * {
+    color: #000000 !important;
+    fill: #000000 !important;
+    stroke: #000000 !important;
   }
 
   button:focus-visible,
@@ -139,7 +171,7 @@
   select:focus-visible,
   textarea:focus-visible,
   [tabindex]:focus-visible {
-    outline: 2px solid rgba(255, 185, 0, 0.55) !important;
+    outline: 2px solid #FFB900 !important;
     outline-offset: 2px !important;
   }
 
@@ -190,9 +222,22 @@
   .category[selected],
   richlistitem[selected],
   tr[selected] {
-    background-color: rgba(255, 185, 0, 0.1) !important;
-    color: #FFFFFF !important;
+    background-color: #FFB900 !important;
+    color: #000000 !important;
     border-color: #FFB900 !important;
+    fill: #000000 !important;
+    stroke: #000000 !important;
+  }
+
+  [selected] *,
+  .selected *,
+  [aria-selected="true"] *,
+  .category[selected] *,
+  richlistitem[selected] *,
+  tr[selected] * {
+    color: #000000 !important;
+    fill: #000000 !important;
+    stroke: #000000 !important;
   }
 
   .category[selected] {

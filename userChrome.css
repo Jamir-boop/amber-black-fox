@@ -14,9 +14,9 @@
   --amber-muted: #A0A0A0;
   --amber-disabled: #555555;
   --amber-accent: #FFB900;
-  --amber-hover: rgba(255, 185, 0, 0.1);
-  --amber-active: rgba(255, 185, 0, 0.18);
-  --amber-outline: rgba(255, 185, 0, 0.55);
+  --amber-hover: #FFB900;
+  --amber-active: #FFB900;
+  --amber-outline: #FFB900;
   --amber-border: #332500;
   --amber-border-strong: #664A00;
 
@@ -29,24 +29,24 @@
   --lwt-toolbar-field-focus-color: #FFFFFF !important;
   --lwt-toolbar-field-highlight: #FFB900 !important;
   --lwt-toolbar-field-highlight-text: #000000 !important;
-  --lwt-selected-tab-background-color: transparent !important;
+  --lwt-selected-tab-background-color: #000000 !important;
 
   --toolbar-bgcolor: transparent !important;
   --toolbar-color: #FFFFFF !important;
   --toolbarbutton-icon-fill: #FFFFFF !important;
-  --toolbarbutton-hover-background: rgba(255, 185, 0, 0.1) !important;
-  --toolbarbutton-active-background: rgba(255, 185, 0, 0.18) !important;
-  --button-hover-bgcolor: rgba(255, 185, 0, 0.1) !important;
-  --button-active-bgcolor: rgba(255, 185, 0, 0.18) !important;
+  --toolbarbutton-hover-background: #FFB900 !important;
+  --toolbarbutton-active-background: #FFB900 !important;
+  --button-hover-bgcolor: #FFB900 !important;
+  --button-active-bgcolor: #FFB900 !important;
   --button-primary-bgcolor: #FFB900 !important;
   --button-primary-color: #000000 !important;
 
-  --tab-selected-bgcolor: transparent !important;
-  --tab-hover-background-color: rgba(255, 185, 0, 0.1) !important;
+  --tab-selected-bgcolor: #000000 !important;
+  --tab-hover-background-color: #000000 !important;
   --tab-loading-fill: #FFB900 !important;
 
   --urlbar-box-bgcolor: transparent !important;
-  --urlbar-box-focus-bgcolor: rgba(255, 185, 0, 0.1) !important;
+  --urlbar-box-focus-bgcolor: #050505 !important;
 
   --arrowpanel-background: #000000 !important;
   --arrowpanel-color: #FFFFFF !important;
@@ -58,9 +58,9 @@
   --menu-background-color: #000000 !important;
   --menu-color: #FFFFFF !important;
   --menu-border-color: #FFB900 !important;
-  --menuitem-hover-background-color: rgba(255, 185, 0, 0.1) !important;
+  --menuitem-hover-background-color: #FFB900 !important;
   --menuitem-disabled-hover-background-color: transparent !important;
-  --focus-outline-color: rgba(255, 185, 0, 0.55) !important;
+  --focus-outline-color: #FFB900 !important;
 }
 
 #main-window,
@@ -107,8 +107,10 @@ toolbarbutton > .toolbarbutton-badge-stack,
 
 toolbarbutton:hover:not([disabled="true"]),
 .toolbarbutton-1:hover:not([disabled="true"]) {
-  background-color: rgba(255, 185, 0, 0.1) !important;
-  color: #FFFFFF !important;
+  background-color: #FFB900 !important;
+  color: #000000 !important;
+  fill: #000000 !important;
+  stroke: #000000 !important;
 }
 
 toolbarbutton[open="true"],
@@ -117,35 +119,39 @@ toolbarbutton:active,
 .toolbarbutton-1[open="true"],
 .toolbarbutton-1[checked="true"],
 .toolbarbutton-1:active {
-  background-color: rgba(255, 185, 0, 0.18) !important;
-  color: #FFFFFF !important;
+  background-color: #FFB900 !important;
+  color: #000000 !important;
+  fill: #000000 !important;
+  stroke: #000000 !important;
 }
 
-.tabbrowser-tab {
+toolbarbutton:hover:not([disabled="true"]) > *,
+toolbarbutton[open="true"] > *,
+toolbarbutton[checked="true"] > *,
+toolbarbutton:active > *,
+.toolbarbutton-1:hover:not([disabled="true"]) > *,
+.toolbarbutton-1[open="true"] > *,
+.toolbarbutton-1[checked="true"] > *,
+.toolbarbutton-1:active > * {
+  color: #000000 !important;
+  fill: #000000 !important;
+  stroke: #000000 !important;
+}
+
+.tabbrowser-tab:not([selected="true"]) {
   color: #A0A0A0 !important;
 }
 
-.tabbrowser-tab .tab-label {
-  font-weight: 400 !important;
-}
-
-.tabbrowser-tab:hover > .tab-stack > .tab-background {
-  background-color: rgba(255, 185, 0, 0.1) !important;
-  border-color: #332500 !important;
+.tabbrowser-tab:not([selected="true"]):hover > .tab-stack > .tab-background {
+  background-color: #000000 !important;
+  background-image: none !important;
+  border: 1px solid #FFB900 !important;
+  border-color: #FFB900 !important;
   box-shadow: none !important;
 }
 
-.tabbrowser-tab[selected="true"] {
-  color: #FFFFFF !important;
-}
-
-.tabbrowser-tab[selected="true"] .tab-label {
-  color: #FFFFFF !important;
-  font-weight: 400 !important;
-}
-
 .tabbrowser-tab[selected="true"] > .tab-stack > .tab-background {
-  background-color: transparent !important;
+  background-color: #000000 !important;
   background-image: none !important;
   border: 1px solid #FFB900 !important;
   box-shadow: none !important;
@@ -153,7 +159,7 @@ toolbarbutton:active,
 }
 
 .tabbrowser-tab[selected="true"]:hover > .tab-stack > .tab-background {
-  background-color: transparent !important;
+  background-color: #000000 !important;
   border-color: #FFB900 !important;
 }
 
@@ -179,8 +185,8 @@ findbar,
 #searchbar:focus-within,
 .findbar-textbox:focus {
   background-color: #050505 !important;
-  border-color: #664A00 !important;
-  box-shadow: 0 0 0 1px rgba(255, 185, 0, 0.55) !important;
+  border-color: #FFB900 !important;
+  box-shadow: 0 0 0 1px #FFB900 !important;
 }
 
 #urlbar-input,
@@ -200,7 +206,6 @@ findbar,
 
 .urlbarView,
 .urlbarView-body-inner,
-.urlbarView-row,
 .search-panel-one-offs,
 .search-one-offs {
   background-color: #000000 !important;
@@ -208,13 +213,34 @@ findbar,
   border-color: #332500 !important;
 }
 
+.urlbarView-row,
+.searchbar-engine-one-off-item {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
 .urlbarView-row:hover,
 .urlbarView-row[selected],
 .urlbarView-row[aria-selected="true"],
 .searchbar-engine-one-off-item:hover,
 .searchbar-engine-one-off-item[selected] {
-  background-color: rgba(255, 185, 0, 0.1) !important;
-  color: #FFFFFF !important;
+  background-color: #FFB900 !important;
+  color: #000000 !important;
+  fill: #000000 !important;
+  stroke: #000000 !important;
+}
+
+.urlbarView-row:hover *,
+.urlbarView-row[selected] *,
+.urlbarView-row[aria-selected="true"] *,
+.searchbar-engine-one-off-item:hover *,
+.searchbar-engine-one-off-item[selected] * {
+  color: #000000 !important;
+  fill: #000000 !important;
+  stroke: #000000 !important;
 }
 
 panel,
@@ -229,9 +255,30 @@ popup {
   --panel-background: #000000 !important;
   --panel-color: #FFFFFF !important;
   --panel-border-color: #FFB900 !important;
+  --panel-border-radius: 0 !important;
+  --menuitem-border-radius: 0 !important;
+  --menu-arrow-opacity: 1 !important;
   background-color: #000000 !important;
   color: #FFFFFF !important;
   border-color: #FFB900 !important;
+}
+
+menupopup,
+popup,
+menupopup::part(content),
+popup::part(content),
+menupopup > menu,
+menupopup > menuitem,
+popup > menu,
+popup > menuitem {
+  border-radius: 0 !important;
+}
+
+menupopup > menu::after,
+popup > menu::after {
+  fill: #FFFFFF !important;
+  fill-opacity: 1 !important;
+  -moz-context-properties: fill, fill-opacity !important;
 }
 
 panel::part(content),
@@ -259,9 +306,28 @@ menupopup > menu[_moz-menuactive="true"]:not([disabled="true"]),
 menupopup > menuitem[_moz-menuactive="true"]:not([disabled="true"]),
 popup > menu[_moz-menuactive="true"]:not([disabled="true"]),
 popup > menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
-  background-color: rgba(255, 185, 0, 0.1) !important;
-  color: #FFFFFF !important;
-  fill: #FFFFFF !important;
+  background-color: #FFB900 !important;
+  color: #000000 !important;
+  fill: #000000 !important;
+  stroke: #000000 !important;
+}
+
+.subviewbutton:hover *,
+.subviewbutton[focused] *,
+panel toolbarbutton:hover *,
+menupopup > menu[_moz-menuactive="true"]:not([disabled="true"]) > :is(.menu-text, .menu-accel, .menu-icon, .menu-highlightable-text, label, image, hbox),
+menupopup > menuitem[_moz-menuactive="true"]:not([disabled="true"]) > :is(.menu-text, .menu-accel, .menu-icon, .menu-highlightable-text, label, image, hbox),
+popup > menu[_moz-menuactive="true"]:not([disabled="true"]) > :is(.menu-text, .menu-accel, .menu-icon, .menu-highlightable-text, label, image, hbox),
+popup > menuitem[_moz-menuactive="true"]:not([disabled="true"]) > :is(.menu-text, .menu-accel, .menu-icon, .menu-highlightable-text, label, image, hbox) {
+  color: #000000 !important;
+  fill: #000000 !important;
+  stroke: #000000 !important;
+}
+
+menupopup > menu[_moz-menuactive="true"]:not([disabled="true"])::after,
+popup > menu[_moz-menuactive="true"]:not([disabled="true"])::after {
+  fill: #000000 !important;
+  fill-opacity: 1 !important;
 }
 
 menupopup > menu[disabled="true"],
@@ -298,6 +364,32 @@ toolbarseparator,
   background-color: #000000 !important;
   color: #FFFFFF !important;
   border: 1px solid #FFB900 !important;
+}
+
+#autoscroller,
+.autoscroller {
+  background-color: #FFB900 !important;
+  border: 2px solid #000000 !important;
+  border-radius: 50% !important;
+  box-shadow: 0 0 0 1px #FFB900 !important;
+  color: #000000 !important;
+  fill: #000000 !important;
+  -moz-context-properties: fill, fill-opacity !important;
+  --autoscroll-background-image: url("chrome://global/skin/icons/autoscroll.svg") !important;
+  background-image: var(--autoscroll-background-image) !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+}
+
+#autoscroller[scrolldir="NS"],
+.autoscroller[scrolldir="NS"] {
+  --autoscroll-background-image: url("chrome://global/skin/icons/autoscroll-vertical.svg") !important;
+}
+
+#autoscroller[scrolldir="EW"],
+.autoscroller[scrolldir="EW"] {
+  --autoscroll-background-image: url("chrome://global/skin/icons/autoscroll-horizontal.svg") !important;
 }
 
 notification-message,
