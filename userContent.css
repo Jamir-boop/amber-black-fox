@@ -1,0 +1,229 @@
+/* Amber black Firefox content.
+   Put this file in <profile>/chrome/userContent.css. */
+
+@-moz-document url-prefix("about:") {
+  :root {
+    color-scheme: dark !important;
+    accent-color: #FFB900 !important;
+    scrollbar-color: #664A00 #000000 !important;
+
+    --amber-bg: #000000;
+    --amber-surface-1: #050505;
+    --amber-surface-2: #080808;
+    --amber-surface-3: #101010;
+    --amber-text: #FFFFFF;
+    --amber-muted: #A0A0A0;
+    --amber-disabled: #555555;
+    --amber-accent: #FFB900;
+    --amber-hover: rgba(255, 185, 0, 0.1);
+    --amber-active: rgba(255, 185, 0, 0.18);
+    --amber-outline: rgba(255, 185, 0, 0.55);
+    --amber-border: #332500;
+    --amber-border-strong: #664A00;
+
+    --in-content-page-background: #000000 !important;
+    --in-content-page-color: #FFFFFF !important;
+    --in-content-text-color: #FFFFFF !important;
+    --in-content-deemphasized-text: #A0A0A0 !important;
+    --in-content-box-background: #000 !important;
+    --in-content-box-background-odd: #050505 !important;
+    --in-content-box-info-background: #000 !important;
+    --in-content-box-border-color: #332500 !important;
+    --in-content-border-color: #332500 !important;
+    --in-content-link-color: #FFB900 !important;
+    --in-content-link-color-hover: #FFB900 !important;
+    --in-content-link-color-active: #FFB900 !important;
+    --in-content-link-color-visited: #FFB900 !important;
+    --in-content-accent-color: #FFB900 !important;
+    --in-content-accent-color-active: #FFB900 !important;
+    --in-content-focus-outline-color: rgba(255, 185, 0, 0.55) !important;
+    --focus-outline-color: rgba(255, 185, 0, 0.55) !important;
+
+    --in-content-button-background: #000000 !important;
+    --in-content-button-background-hover: rgba(255, 185, 0, 0.1) !important;
+    --in-content-button-background-active: rgba(255, 185, 0, 0.18) !important;
+    --in-content-button-text-color: #FFFFFF !important;
+    --in-content-primary-button-background: #FFB900 !important;
+    --in-content-primary-button-background-hover: #FFB900 !important;
+    --in-content-primary-button-background-active: #FFB900 !important;
+    --in-content-primary-button-text-color: #000000 !important;
+
+    --newtab-background-color: #000000 !important;
+    --newtab-background-color-secondary: #000 !important;
+    --newtab-text-primary-color: #FFFFFF !important;
+    --newtab-text-secondary-color: #A0A0A0 !important;
+    --newtab-primary-action-background: #FFB900 !important;
+    --newtab-primary-element-text-color: #000000 !important;
+    --newtab-element-hover-color: rgba(255, 185, 0, 0.1) !important;
+    --newtab-border-color: #332500 !important;
+    --newtab-card-background-color: #000 !important;
+    --newtab-wordmark-color: #FFFFFF !important;
+  }
+
+  html,
+  body,
+  #root,
+  #app,
+  .main-content,
+  .page,
+  .sticky-container,
+  .main-content-wrapper {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+  }
+
+  ::selection {
+    background-color: #FFB900 !important;
+    color: #000000 !important;
+  }
+
+  a,
+  a:visited,
+  .text-link,
+  .link {
+    color: #FFB900 !important;
+  }
+
+  p,
+  span,
+  label,
+  legend,
+  description,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  li,
+  dt,
+  dd,
+  th,
+  td {
+    color: inherit;
+  }
+
+  button,
+  input,
+  select,
+  textarea,
+  richlistitem,
+  treechildren,
+  list,
+  menulist {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+    border-color: #332500 !important;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    accent-color: #FFB900 !important;
+  }
+
+  button:hover,
+  select:hover,
+  input:hover,
+  textarea:hover,
+  richlistitem:hover,
+  tr:hover,
+  .list-item:hover,
+  .category:hover,
+  .sidebar-footer-link:hover {
+    background-color: rgba(255, 185, 0, 0.1) !important;
+    color: #FFFFFF !important;
+  }
+
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 2px solid rgba(255, 185, 0, 0.55) !important;
+    outline-offset: 2px !important;
+  }
+
+  button.primary,
+  button[type="submit"],
+  .primary,
+  .primary-button,
+  .action-primary {
+    background-color: #FFB900 !important;
+    border-color: #FFB900 !important;
+    color: #000000 !important;
+  }
+
+  button.primary:hover,
+  button[type="submit"]:hover,
+  .primary:hover,
+  .primary-button:hover,
+  .action-primary:hover {
+    background-color: #FFB900 !important;
+    color: #000000 !important;
+  }
+
+  card,
+  groupbox,
+  panel-list,
+  addon-card,
+  recommended-addon-card,
+  message-bar,
+  .card,
+  .section,
+  .container,
+  .message-bar,
+  .info-box-container,
+  .addon-card,
+  .card-contents,
+  .top-site-outer,
+  .ds-card,
+  .tile,
+  .search-wrapper input {
+    background-color: #000 !important;
+    color: #FFFFFF !important;
+    border-color: #332500 !important;
+  }
+
+  [selected],
+  .selected,
+  [aria-selected="true"],
+  .category[selected],
+  richlistitem[selected],
+  tr[selected] {
+    background-color: rgba(255, 185, 0, 0.1) !important;
+    color: #FFFFFF !important;
+    border-color: #FFB900 !important;
+  }
+
+  .category[selected] {
+    border-inline-start-color: #FFB900 !important;
+  }
+
+  hr,
+  menuseparator,
+  treecol,
+  th,
+  td,
+  tr,
+  table,
+  .separator,
+  .thin-separator {
+    border-color: #332500 !important;
+  }
+
+  code,
+  pre,
+  kbd,
+  samp {
+    background-color: #050505 !important;
+    color: #FFB900 !important;
+    border-color: #332500 !important;
+  }
+
+  svg,
+  img[src$=".svg"] {
+    color: currentColor !important;
+    fill: currentColor !important;
+    stroke: currentColor !important;
+  }
+}

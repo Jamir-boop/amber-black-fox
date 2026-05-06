@@ -1,0 +1,309 @@
+/* Amber black Firefox chrome.
+   Put this file in <profile>/chrome/userChrome.css.
+   Copy img/background.gif to <profile>/chrome/img/background.gif. */
+
+:root {
+  color-scheme: dark !important;
+  accent-color: #FFB900 !important;
+
+  --amber-bg: #000000;
+  --amber-surface-1: #050505;
+  --amber-surface-2: #080808;
+  --amber-surface-3: #101010;
+  --amber-text: #FFFFFF;
+  --amber-muted: #A0A0A0;
+  --amber-disabled: #555555;
+  --amber-accent: #FFB900;
+  --amber-hover: rgba(255, 185, 0, 0.1);
+  --amber-active: rgba(255, 185, 0, 0.18);
+  --amber-outline: rgba(255, 185, 0, 0.55);
+  --amber-border: #332500;
+  --amber-border-strong: #664A00;
+
+  --lwt-accent-color: #000000 !important;
+  --lwt-text-color: #FFFFFF !important;
+  --lwt-toolbar-field-background-color: #000000 !important;
+  --lwt-toolbar-field-color: #FFFFFF !important;
+  --lwt-toolbar-field-border-color: #332500 !important;
+  --lwt-toolbar-field-focus: #050505 !important;
+  --lwt-toolbar-field-focus-color: #FFFFFF !important;
+  --lwt-toolbar-field-highlight: #FFB900 !important;
+  --lwt-toolbar-field-highlight-text: #000000 !important;
+  --lwt-selected-tab-background-color: transparent !important;
+
+  --toolbar-bgcolor: transparent !important;
+  --toolbar-color: #FFFFFF !important;
+  --toolbarbutton-icon-fill: #FFFFFF !important;
+  --toolbarbutton-hover-background: rgba(255, 185, 0, 0.1) !important;
+  --toolbarbutton-active-background: rgba(255, 185, 0, 0.18) !important;
+  --button-hover-bgcolor: rgba(255, 185, 0, 0.1) !important;
+  --button-active-bgcolor: rgba(255, 185, 0, 0.18) !important;
+  --button-primary-bgcolor: #FFB900 !important;
+  --button-primary-color: #000000 !important;
+
+  --tab-selected-bgcolor: transparent !important;
+  --tab-hover-background-color: rgba(255, 185, 0, 0.1) !important;
+  --tab-loading-fill: #FFB900 !important;
+
+  --urlbar-box-bgcolor: transparent !important;
+  --urlbar-box-focus-bgcolor: rgba(255, 185, 0, 0.1) !important;
+
+  --arrowpanel-background: #000000 !important;
+  --arrowpanel-color: #FFFFFF !important;
+  --arrowpanel-border-color: #FFB900 !important;
+  --panel-background: #000000 !important;
+  --panel-color: #FFFFFF !important;
+  --panel-border-color: #FFB900 !important;
+  --panel-separator-color: #332500 !important;
+  --menu-background-color: #000000 !important;
+  --menu-color: #FFFFFF !important;
+  --menu-border-color: #FFB900 !important;
+  --menuitem-hover-background-color: rgba(255, 185, 0, 0.1) !important;
+  --menuitem-disabled-hover-background-color: transparent !important;
+  --focus-outline-color: rgba(255, 185, 0, 0.55) !important;
+}
+
+#main-window,
+#navigator-toolbox,
+#TabsToolbar,
+#nav-bar,
+#PersonalToolbar,
+#titlebar,
+#browser,
+#appcontent,
+findbar {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+}
+
+#navigator-toolbox {
+  background-image: url("img/background.gif") !important;
+  background-position: right top !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  border-bottom: 1px solid #332500 !important;
+}
+
+#TabsToolbar,
+#nav-bar,
+#PersonalToolbar {
+  background: transparent !important;
+  border-color: #332500 !important;
+  box-shadow: none !important;
+}
+
+toolbarbutton,
+toolbarbutton > .toolbarbutton-icon,
+toolbarbutton > .toolbarbutton-text,
+toolbarbutton > .toolbarbutton-badge-stack,
+#urlbar-icons,
+#urlbar-icons toolbarbutton,
+.urlbar-page-action,
+.toolbarbutton-1 {
+  color: #FFFFFF !important;
+  fill: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+}
+
+toolbarbutton:hover:not([disabled="true"]),
+.toolbarbutton-1:hover:not([disabled="true"]) {
+  background-color: rgba(255, 185, 0, 0.1) !important;
+  color: #FFFFFF !important;
+}
+
+toolbarbutton[open="true"],
+toolbarbutton[checked="true"],
+toolbarbutton:active,
+.toolbarbutton-1[open="true"],
+.toolbarbutton-1[checked="true"],
+.toolbarbutton-1:active {
+  background-color: rgba(255, 185, 0, 0.18) !important;
+  color: #FFFFFF !important;
+}
+
+.tabbrowser-tab {
+  color: #A0A0A0 !important;
+}
+
+.tabbrowser-tab .tab-label {
+  font-weight: 400 !important;
+}
+
+.tabbrowser-tab:hover > .tab-stack > .tab-background {
+  background-color: rgba(255, 185, 0, 0.1) !important;
+  border-color: #332500 !important;
+  box-shadow: none !important;
+}
+
+.tabbrowser-tab[selected="true"] {
+  color: #FFFFFF !important;
+}
+
+.tabbrowser-tab[selected="true"] .tab-label {
+  color: #FFFFFF !important;
+  font-weight: 400 !important;
+}
+
+.tabbrowser-tab[selected="true"] > .tab-stack > .tab-background {
+  background-color: transparent !important;
+  background-image: none !important;
+  border: 1px solid #FFB900 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.tabbrowser-tab[selected="true"]:hover > .tab-stack > .tab-background {
+  background-color: transparent !important;
+  border-color: #FFB900 !important;
+}
+
+.tab-line,
+.tab-throbber,
+.tab-icon-pending,
+.tab-icon-image {
+  color: #FFFFFF !important;
+  fill: #FFFFFF !important;
+}
+
+#urlbar-background,
+#searchbar,
+findbar,
+.findbar-textbox {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  border-color: #332500 !important;
+  box-shadow: none !important;
+}
+
+#urlbar[focused="true"] #urlbar-background,
+#searchbar:focus-within,
+.findbar-textbox:focus {
+  background-color: #050505 !important;
+  border-color: #664A00 !important;
+  box-shadow: 0 0 0 1px rgba(255, 185, 0, 0.55) !important;
+}
+
+#urlbar-input,
+#urlbar-scheme,
+#urlbar .urlbar-input-box,
+.searchbar-textbox,
+.findbar-textbox {
+  color: #FFFFFF !important;
+}
+
+#urlbar ::selection,
+.searchbar-textbox::selection,
+.findbar-textbox::selection {
+  background-color: #FFB900 !important;
+  color: #000000 !important;
+}
+
+.urlbarView,
+.urlbarView-body-inner,
+.urlbarView-row,
+.search-panel-one-offs,
+.search-one-offs {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  border-color: #332500 !important;
+}
+
+.urlbarView-row:hover,
+.urlbarView-row[selected],
+.urlbarView-row[aria-selected="true"],
+.searchbar-engine-one-off-item:hover,
+.searchbar-engine-one-off-item[selected] {
+  background-color: rgba(255, 185, 0, 0.1) !important;
+  color: #FFFFFF !important;
+}
+
+panel,
+panelmultiview,
+.panel-viewcontainer,
+.panel-viewstack,
+.panel-subview-body,
+.panel-header,
+.panel-arrowcontent,
+menupopup,
+popup {
+  --panel-background: #000000 !important;
+  --panel-color: #FFFFFF !important;
+  --panel-border-color: #FFB900 !important;
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  border-color: #FFB900 !important;
+}
+
+panel::part(content),
+menupopup::part(content) {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  border-color: #FFB900 !important;
+}
+
+.subviewbutton,
+panel toolbarbutton,
+menupopup > menu,
+menupopup > menuitem,
+popup > menu,
+popup > menuitem {
+  color: #FFFFFF !important;
+  fill: #FFFFFF !important;
+  background-color: transparent !important;
+}
+
+.subviewbutton:hover,
+.subviewbutton[focused],
+panel toolbarbutton:hover,
+menupopup > menu[_moz-menuactive="true"]:not([disabled="true"]),
+menupopup > menuitem[_moz-menuactive="true"]:not([disabled="true"]),
+popup > menu[_moz-menuactive="true"]:not([disabled="true"]),
+popup > menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
+  background-color: rgba(255, 185, 0, 0.1) !important;
+  color: #FFFFFF !important;
+  fill: #FFFFFF !important;
+}
+
+menupopup > menu[disabled="true"],
+menupopup > menuitem[disabled="true"],
+popup > menu[disabled="true"],
+popup > menuitem[disabled="true"],
+.subviewbutton[disabled="true"] {
+  color: #555555 !important;
+  fill: #555555 !important;
+}
+
+menuseparator,
+toolbarseparator,
+.PanelUI-subView toolbarseparator,
+.panel-subview-footer,
+.panel-header {
+  border-color: #332500 !important;
+}
+
+#sidebar-box,
+#sidebar-header,
+#sidebar-search-container,
+#sidebar-splitter {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  border-color: #332500 !important;
+}
+
+#sidebar-header {
+  border-bottom: 1px solid #332500 !important;
+}
+
+#statuspanel-label {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  border: 1px solid #FFB900 !important;
+}
+
+notification-message,
+notificationbox,
+.notificationbox-stack {
+  background-color: #000 !important;
+  color: #FFFFFF !important;
+  border-color: #332500 !important;
+}
