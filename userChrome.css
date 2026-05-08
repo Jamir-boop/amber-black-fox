@@ -30,6 +30,10 @@
   --lwt-toolbar-field-highlight: #FFB900 !important;
   --lwt-toolbar-field-highlight-text: #000000 !important;
   --lwt-selected-tab-background-color: #000000 !important;
+  --lwt-tabs-border-color: #000000 !important;
+  --chrome-content-separator-color: #000000 !important;
+  --tabs-border-color: #000000 !important;
+  --tab-line-color: #000000 !important;
 
   --toolbar-bgcolor: transparent !important;
   --toolbar-color: #FFFFFF !important;
@@ -84,7 +88,7 @@ findbar {
   background-position: right top !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
-  border-bottom: 1px solid #332500 !important;
+  border-bottom: 1px solid #000000 !important;
 }
 
 #TabsToolbar,
