@@ -390,6 +390,116 @@ popup::part(content) {
   stroke: #FFFFFF !important;
 }
 
+@-moz-document url("chrome://global/content/commonDialog.xhtml") {
+  #commonDialog {
+    --button-bgcolor: transparent !important;
+    --button-hover-bgcolor: #FFB900 !important;
+    --button-active-bgcolor: #FFB900 !important;
+    --button-color: #FFFFFF !important;
+    --button-border-color: #332500 !important;
+    --button-primary-bgcolor: #FFB900 !important;
+    --button-primary-hover-bgcolor: #FFB900 !important;
+    --button-primary-active-bgcolor: #FFB900 !important;
+    --button-primary-color: #000000 !important;
+    --button-primary-border-color: #FFB900 !important;
+
+    --button-background-color: transparent !important;
+    --button-background-color-hover: #FFB900 !important;
+    --button-background-color-active: #FFB900 !important;
+    --button-text-color: #FFFFFF !important;
+    --button-text-color-hover: #000000 !important;
+    --button-text-color-active: #000000 !important;
+    --button-border: 1px solid #332500 !important;
+    --button-border-color-hover: #FFB900 !important;
+    --button-border-color-active: #FFB900 !important;
+    --button-background-color-primary: #FFB900 !important;
+    --button-background-color-primary-hover: #FFB900 !important;
+    --button-background-color-primary-active: #FFB900 !important;
+    --button-text-color-primary: #000000 !important;
+    --button-text-color-primary-hover: #000000 !important;
+    --button-text-color-primary-active: #000000 !important;
+    --button-border-color-primary: #FFB900 !important;
+    --button-border-color-primary-hover: #FFB900 !important;
+    --button-border-color-primary-active: #FFB900 !important;
+
+    --in-content-button-background: transparent !important;
+    --in-content-button-background-hover: #FFB900 !important;
+    --in-content-button-background-active: #FFB900 !important;
+    --in-content-button-text-color: #FFFFFF !important;
+    --in-content-button-border-color: #332500 !important;
+    --in-content-primary-button-background: #FFB900 !important;
+    --in-content-primary-button-background-hover: #FFB900 !important;
+    --in-content-primary-button-background-active: #FFB900 !important;
+    --in-content-primary-button-text-color: #000000 !important;
+  }
+
+  #commonDialog::part(dialog-button) {
+    appearance: none !important;
+    -moz-appearance: none !important;
+    -moz-default-appearance: none !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #FFFFFF !important;
+    fill: #FFFFFF !important;
+    stroke: #FFFFFF !important;
+    border: 1px solid #332500 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  #commonDialog button {
+    appearance: none !important;
+    -moz-appearance: none !important;
+    -moz-default-appearance: none !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #FFFFFF !important;
+    fill: #FFFFFF !important;
+    stroke: #FFFFFF !important;
+    border: 1px solid #332500 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+    button:not([disabled="true"]):hover{
+      color: black !important;
+  }
+
+  #commonDialog::part(dialog-button):default,
+  #commonDialog::part(dialog-button):focus,
+  #commonDialog::part(dialog-button):focus-visible,
+  #commonDialog::part(dialog-button):hover,
+  #commonDialog::part(dialog-button):active {
+    background: #FFB900 !important;
+    background-color: #FFB900 !important;
+    color: #000000 !important;
+    fill: #000000 !important;
+    stroke: #000000 !important;
+    border-color: #FFB900 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  #commonDialog button[dlgtype="accept"],
+  #commonDialog button[default="true"],
+  #commonDialog button:default,
+  #commonDialog button:focus,
+  #commonDialog button:focus-visible,
+  #commonDialog button:hover,
+  #commonDialog button:active {
+    background: #FFB900 !important;
+    background-color: #FFB900 !important;
+    color: #000000 !important;
+    fill: #000000 !important;
+    stroke: #000000 !important;
+    border-color: #FFB900 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+}
+
 .subviewbutton,
 panel toolbarbutton,
 menupopup > menu,
