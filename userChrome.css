@@ -39,6 +39,9 @@
   --button-hover-bgcolor: #FFB900 !important;
   --button-active-bgcolor: #FFB900 !important;
   --button-primary-bgcolor: #FFB900 !important;
+  --button-primary-hover-bgcolor: #FFB900 !important;
+  --button-primary-active-bgcolor: #FFB900 !important;
+  --button-primary-border-color: #FFB900 !important;
   --button-primary-color: #000000 !important;
 
   --tab-selected-bgcolor: #000000 !important;
@@ -145,8 +148,8 @@ toolbarbutton:active > *,
 .tabbrowser-tab:not([selected="true"]):hover > .tab-stack > .tab-background {
   background-color: #000000 !important;
   background-image: none !important;
-  border: 1px solid #FFB900 !important;
-  border-color: #FFB900 !important;
+  border: 1px solid rgba(255, 185, 0, 0.2) !important;
+  border-color: rgba(255, 185, 0, 0.2) !important;
   box-shadow: none !important;
 }
 
@@ -253,7 +256,7 @@ panelmultiview,
 menupopup,
 popup {
   --panel-background: #000000 !important;
-  --panel-color: #FFFFFF !important;
+  --panel-color: #ffb900 !important;
   --panel-border-color: #FFB900 !important;
   --panel-border-radius: 0 !important;
   --arrowpanel-border-radius: 0 !important;
@@ -313,10 +316,85 @@ popup::part(content) {
   box-shadow: none !important;
 }
 
+.popup-notification-primary-button {
+  appearance: none !important;
+  -moz-appearance: none !important;
+  background: #FFB900 !important;
+  background-color: #FFB900 !important;
+  color: #000000 !important;
+  fill: #000000 !important;
+  stroke: #000000 !important;
+  border: 1px solid #FFB900 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.popup-notification-secondary-button,
+.popup-notification-dropmarker,
+.panel-footer > .footer-button:not(.popup-notification-primary-button) {
+  appearance: none !important;
+  -moz-appearance: none !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  color: #FFFFFF !important;
+  fill: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+  border: 1px solid #332500 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.popup-notification-primary-button:hover,
+.popup-notification-primary-button:active,
+.popup-notification-primary-button[open="true"],
+.popup-notification-secondary-button:hover,
+.popup-notification-secondary-button:active,
+.popup-notification-secondary-button[open="true"],
+.popup-notification-dropmarker:hover,
+.popup-notification-dropmarker:active,
+.popup-notification-dropmarker[open="true"],
+.panel-footer > .footer-button:hover,
+.panel-footer > .footer-button:active,
+.panel-footer > .footer-button[open="true"] {
+  background: #FFB900 !important;
+  background-color: #FFB900 !important;
+  color: #000000 !important;
+  fill: #000000 !important;
+  stroke: #000000 !important;
+  border-color: #FFB900 !important;
+}
+
+.popup-notification-primary-button *,
+.popup-notification-primary-button:hover *,
+.popup-notification-primary-button:active *,
+.popup-notification-primary-button[open="true"] *,
+.popup-notification-secondary-button:hover *,
+.popup-notification-secondary-button:active *,
+.popup-notification-secondary-button[open="true"] *,
+.popup-notification-dropmarker:hover *,
+.popup-notification-dropmarker:active *,
+.popup-notification-dropmarker[open="true"] *,
+.panel-footer > .footer-button:hover *,
+.panel-footer > .footer-button:active *,
+.panel-footer > .footer-button[open="true"] * {
+  color: #000000 !important;
+  fill: #000000 !important;
+  stroke: #000000 !important;
+}
+
+.popup-notification-secondary-button:not(:hover):not(:active):not([open="true"]) *,
+.popup-notification-dropmarker:not(:hover):not(:active):not([open="true"]) *,
+.panel-footer > .footer-button:not(.popup-notification-primary-button):not(:hover):not(:active):not([open="true"]) * {
+  color: #FFFFFF !important;
+  fill: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+}
+
 .subviewbutton,
 panel toolbarbutton,
 menupopup > menu,
 menupopup > menuitem,
+#context-navigation > .menuitem-iconic,
 popup > menu,
 popup > menuitem {
   color: #FFFFFF !important;
@@ -327,6 +405,7 @@ popup > menuitem {
 .subviewbutton:hover,
 .subviewbutton[focused],
 panel toolbarbutton:hover,
+#context-navigation > .menuitem-iconic[_moz-menuactive="true"]:not([disabled="true"]),
 menupopup > menu[_moz-menuactive="true"]:not([disabled="true"]),
 menupopup > menuitem[_moz-menuactive="true"]:not([disabled="true"]),
 popup > menu[_moz-menuactive="true"]:not([disabled="true"]),
@@ -340,6 +419,7 @@ popup > menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
 .subviewbutton:hover *,
 .subviewbutton[focused] *,
 panel toolbarbutton:hover *,
+#context-navigation > .menuitem-iconic[_moz-menuactive="true"]:not([disabled="true"]) > :is(.menu-text, .menu-accel, .menu-icon, .menu-highlightable-text, label, image, hbox),
 menupopup > menu[_moz-menuactive="true"]:not([disabled="true"]) > :is(.menu-text, .menu-accel, .menu-icon, .menu-highlightable-text, label, image, hbox),
 menupopup > menuitem[_moz-menuactive="true"]:not([disabled="true"]) > :is(.menu-text, .menu-accel, .menu-icon, .menu-highlightable-text, label, image, hbox),
 popup > menu[_moz-menuactive="true"]:not([disabled="true"]) > :is(.menu-text, .menu-accel, .menu-icon, .menu-highlightable-text, label, image, hbox),
@@ -357,6 +437,7 @@ popup > menu[_moz-menuactive="true"]:not([disabled="true"])::after {
 
 menupopup > menu[disabled="true"],
 menupopup > menuitem[disabled="true"],
+#context-navigation > .menuitem-iconic[disabled="true"],
 popup > menu[disabled="true"],
 popup > menuitem[disabled="true"],
 .subviewbutton[disabled="true"] {
@@ -393,28 +474,25 @@ toolbarseparator,
 
 #autoscroller,
 .autoscroller {
-  background-color: #FFB900 !important;
-  border: 2px solid #000000 !important;
   border-radius: 50% !important;
-  box-shadow: 0 0 0 1px #FFB900 !important;
-  color: #000000 !important;
-  fill: #000000 !important;
+  color: #FFB900 !important;
+  fill: #FFB900 !important;
   -moz-context-properties: fill, fill-opacity !important;
-  --autoscroll-background-image: url("chrome://global/skin/icons/autoscroll.svg") !important;
+  --autoscroll-background-image: url("img/autoscroll.svg") !important;
   background-image: var(--autoscroll-background-image) !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
-  background-size: contain !important;
+  --panel-background: transparent !important;
 }
 
 #autoscroller[scrolldir="NS"],
 .autoscroller[scrolldir="NS"] {
-  --autoscroll-background-image: url("chrome://global/skin/icons/autoscroll-vertical.svg") !important;
+  --autoscroll-background-image: url("img/autoscroll-vertical.svg") !important;
 }
 
 #autoscroller[scrolldir="EW"],
 .autoscroller[scrolldir="EW"] {
-  --autoscroll-background-image: url("chrome://global/skin/icons/autoscroll-horizontal.svg") !important;
+  --autoscroll-background-image: url("img/autoscroll-horizontal.svg") !important;
 }
 
 notification-message,

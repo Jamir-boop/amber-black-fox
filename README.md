@@ -29,7 +29,7 @@ Copy these repo files into profile `chrome` folder:
 ```text
 userChrome.css
 userContent.css
-img/background.gif
+img/
 ```
 
 Expected profile layout:
@@ -38,6 +38,9 @@ Expected profile layout:
 <profile>/chrome/userChrome.css
 <profile>/chrome/userContent.css
 <profile>/chrome/img/background.gif
+<profile>/chrome/img/autoscroll.svg
+<profile>/chrome/img/autoscroll-vertical.svg
+<profile>/chrome/img/autoscroll-horizontal.svg
 ```
 
 Restart Firefox.
